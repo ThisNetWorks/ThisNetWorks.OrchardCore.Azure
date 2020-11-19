@@ -2,8 +2,8 @@ using OrchardCore.Modules.Manifest;
 
 [assembly: Module(
     Name = "ThisNetWorks OrchardCore Azure Queues",
-    Author = "The Orchard Core Team",
-    Website = "https://orchardcore.net",
+    Author = "ThisNetWorks",
+    Website = "https://github.com/thisnetworks",
     Version = "0.0.1"
 )]
 

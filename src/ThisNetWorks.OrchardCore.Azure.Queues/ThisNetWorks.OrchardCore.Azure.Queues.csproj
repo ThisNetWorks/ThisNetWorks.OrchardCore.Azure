@@ -14,6 +14,11 @@
     <PackageReference Include="OrchardCore.ContentManagement" />
     <PackageReference Include="OrchardCore.ContentTypes.Abstractions" />
     <PackageReference Include="OrchardCore.DisplayManagement" />
+    <PackageReference Include="OrchardCore.Infrastructure.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThisNetWorks.OrchardCore.Azure.Queues.Abstractions\ThisNetWorks.OrchardCore.Azure.Queues.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

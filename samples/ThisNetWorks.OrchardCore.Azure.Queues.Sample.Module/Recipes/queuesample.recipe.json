@@ -1,0 +1,31 @@
+{
+  "name": "AzureQueueSample",
+  "displayName": "Azure Queue Sample",
+  "description": "Azure Queue Sample based on TheBlogTheme",
+  "author": "ThisNetWorks",
+  "website": "https://github.com/ThisNetWorks",
+  "version": "1",
+  "issetuprecipe": true,
+  "categories": [ "default" ],
+  "tags": [ "blog" ],  
+  "steps": [
+     {
+      "name": "Recipes",
+      "Values": [
+        {
+          "ExecutionId" : "",
+          "Name" : "Blog"
+        }
+      ]
+     },
+    {
+      "name": "Feature",
+      "enable": [
+        "ThisNetWorks.OrchardCore.Azure.Queues",
+        "ThisNetWorks.OrchardCore.Azure.Queues.Sample.Model"
+      ],
+      "disable": [
+      ]
+    }      
+  ]
+}

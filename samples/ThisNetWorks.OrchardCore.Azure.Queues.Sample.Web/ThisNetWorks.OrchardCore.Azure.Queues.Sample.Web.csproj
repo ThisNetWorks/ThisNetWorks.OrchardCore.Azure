@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\ThisNetWorks.OrchardCore.Azure.Queues\ThisNetWorks.OrchardCore.Azure.Queues.csproj" />
+    <ProjectReference Include="..\ThisNetWorks.OrchardCore.Azure.Queues.Sample.Module\ThisNetWorks.OrchardCore.Azure.Queues.Sample.Module.csproj" />
   </ItemGroup>
 
 </Project>

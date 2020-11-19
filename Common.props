@@ -6,7 +6,7 @@
     <PackageProjectUrl>https://github.com/ThisNetWorks/ThisNetWorks.OrchardCore.Robots</PackageProjectUrl>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
     <VersionSuffix Condition="'$(VersionSuffix)'!='' AND '$(GITHUB_RUN_ID)' != ''">$(VersionSuffix)-$(GITHUB_RUN_ID)</VersionSuffix>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>Latest</LangVersion>

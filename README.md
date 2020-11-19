@@ -11,4 +11,4 @@ Refer the sample projects for example.
 
 Currently build against 
 
-- Orchard Core Version `1.0.0-rc2-14911`
+- Orchard Core Version `1.0.0-rc2-15493`
