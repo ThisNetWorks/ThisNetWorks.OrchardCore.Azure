@@ -1,0 +1,6 @@
+@model dynamic
+
+<h1>@T["Message Sent"]</h1>
+<p>Message Id : @Model.MessageId</p>
+
+<a class="btn btn-primary" asp-route-controller="Queue" asp-route-action="Index">@T["Back"]</a>
