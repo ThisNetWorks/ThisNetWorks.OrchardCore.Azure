@@ -38,22 +38,28 @@ namespace ThisNetWorks.OrchardCore.Azure.Queues
 
         public static async Task<Response<SendReceipt>> SendMessageAsync(this IAzureQueueService azureQueueService, string queueName, JObject message)
         {
-            // so it's either send to any queue, or have a queue resolver, that validates it's the correct queue for the type.
+            // TODO pool.
+            var sb = new StringBuilder();
 
-            StringBuilder sb = new StringBuilder();
-            StringWriter sw = new StringWriter(sb);
-            using (var jsonWriter = new JsonTextWriter(sw))
+            using (var sw = new StringWriter(sb))
             {
-                await message.WriteToAsync(jsonWriter);
+                using (var jsonWriter = new JsonTextWriter(sw))
+                {
+                    await message.WriteToAsync(jsonWriter);
+                }
             }
 
-            return await azureQueueService.SendMessageAsync(queueName, typeof(JObject), sb.ToString());
+            var messageText = Convert.ToBase64String(Encoding.UTF8.GetBytes(sb.ToString()));
+
+            return await azureQueueService.SendMessageAsync(queueName, typeof(JObject), messageText);
 
         }
 
         public static Task<Response<SendReceipt>> SendMessageAsync(this IAzureQueueService azureQueueService, Type type, object message)
         {
             var messageText = JsonConvert.SerializeObject(message);
+
+            messageText = Convert.ToBase64String(Encoding.UTF8.GetBytes(messageText));
 
             return azureQueueService.SendMessageAsync(type.Name, type, messageText);
         }            
