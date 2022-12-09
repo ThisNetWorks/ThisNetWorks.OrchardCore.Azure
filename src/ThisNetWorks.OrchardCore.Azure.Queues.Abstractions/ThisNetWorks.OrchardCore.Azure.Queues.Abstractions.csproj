@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Queues" Version="12.8.0" />
+    <PackageReference Include="Azure.Storage.Queues" />
     <PackageReference Include="Newtonsoft.Json" />
   </ItemGroup>
 
